@@ -1,0 +1,15 @@
+baseURL = "http://stantonteters.com/"
+languageCode = "en-us"
+title = "Stanton Teters"
+
+[author]
+	name = "Stanton Teters"
+
+[params]
+	tagline = "Making it up as I go along"
+	description = "Making it up as I go along"
+	github = "stantont"
+	gravatarHash = "6726109ee855ffcdd9bff44adc0fc755"
+	twitter = "https://twitter.com/stantont"
+
+newContentEditor = "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
