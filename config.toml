@@ -1,6 +1,10 @@
 baseURL = "http://stantonteters.com/"
 languageCode = "en-us"
 title = "Stanton Teters"
+newContentEditor = "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+
+[permalinks]
+	post = "/:year/:month/:title/"
 
 [author]
 	name = "Stanton Teters"
@@ -12,4 +16,3 @@ title = "Stanton Teters"
 	gravatarHash = "6726109ee855ffcdd9bff44adc0fc755"
 	twitter = "https://twitter.com/stantont"
 
-newContentEditor = "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
