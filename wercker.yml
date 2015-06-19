@@ -19,16 +19,16 @@ build:
     # Steps make up the actions in your pipeline
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
-  steps:
-    - arjen/hugo-build@1.4.0
-      version: "0.14"
-      theme: "hyde-x"
+    steps:
+        - arjen/hugo-build@1.4.0
+            version: "0.14"
+            theme: "hyde-x"
 
 deploy:
-  steps:
-    - wercker/s3sync@2.0.3
-      key-id: $KEY
-      key-secret: $SECRET
-      bucker-url: $BUCKET
-      source-dir: public
-      opts: --acl-public
+    steps:
+        - wercker/s3sync@2.0.3
+            key-id: $KEY
+            key-secret: $SECRET
+            bucker-url: $BUCKET
+            source-dir: public
+            opts: "--acl-public"
