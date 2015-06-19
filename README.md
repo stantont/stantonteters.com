@@ -1,0 +1,1 @@
+This is the repository for the site of Stanton Teters.
