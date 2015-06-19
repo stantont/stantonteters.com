@@ -20,7 +20,7 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
     steps:
-        - arjen/hugo-build@1.4.0
+        - arjen/hugo-build
             version: "0.14"
             theme: "hyde-x"
 
