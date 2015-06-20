@@ -29,6 +29,6 @@ deploy:
         - wercker/s3sync@2.0.3:
             key-id: $KEY
             key-secret: $SECRET
-            bucker-url: $BUCKET
+            bucket-url: $BUCKET
             source-dir: public
             opts: "--acl-public"
