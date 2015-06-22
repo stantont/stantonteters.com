@@ -25,8 +25,9 @@ build:
         - script:
             name: git submodules
             code: |
-                git submodule init
-                git submodule update
+                git submodule update --init --recursive
+                #git submodule init
+                #git submodule update
         - arjen/hugo-build@1.4.0:
             version: "0.14"
             theme: "hyde-x"
