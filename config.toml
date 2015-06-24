@@ -1,4 +1,4 @@
-baseURL = "http://stantonteters.com/"
+baseURL = "http://stantonteters.com"
 languageCode = "en-us"
 title = "Stanton Teters"
 newContentEditor = "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
