@@ -1,6 +1,6 @@
 +++
 date = "2015-06-13T12:01:01-04:00"
-title = "Fixing Hugo's Bash tab completion on the Mac"
+title = "Fixing Hugo's Bash Tab Completion on the Mac"
 slug = "bash-completion-version-problem"
 categories = [
     "Technology",
