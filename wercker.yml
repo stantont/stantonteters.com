@@ -21,7 +21,7 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
     steps:
         - install-packages:
-            packages: git
+            packages: git python3-pygments
         - script:
             name: git submodules
             code: |
