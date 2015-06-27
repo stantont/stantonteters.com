@@ -3,7 +3,7 @@ checkout:
     - git submodule update --init --recursive
 dependencies:
   pre:
-    - sudo pip install pygments
+    - sudo pip install pygments python-dateutil
     - curl -L https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_linux_amd64.tar.gz | tar -xz
     - hugo_0.14_linux_amd64/hugo_0.14_linux_amd64 --theme=hyde-x
     - curl -L https://github.com/s3tools/s3cmd/releases/download/v1.5.2/s3cmd-1.5.2.tar.gz | tar -xz
