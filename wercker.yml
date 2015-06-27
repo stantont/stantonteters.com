@@ -26,8 +26,8 @@ build:
             name: git submodules
             code: |
                 git submodule update --init --recursive
-                #git submodule init
-                #git submodule update
+                echo $PATH
+                which pygmentize
         - arjen/hugo-build@1.4.0:
             version: "0.14"
             theme: "hyde-x"
