@@ -1,0 +1,17 @@
+
+.fa-external-link {
+  color: #9a9a9a;
+  font-size: 1.25rem;
+  padding-left: .5rem;
+  vertical-align: middle;
+}
+
+.post-title.link-type {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.permalink {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
