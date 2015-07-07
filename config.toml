@@ -6,6 +6,7 @@ pygmentsuseclasses = true
 
 [permalinks]
 	post = "/:year/:month/:slug/"
+	link = "/:year/:month/:slug"
 
 [author]
 	name = "Stanton Teters"
@@ -13,7 +14,7 @@ pygmentsuseclasses = true
 [params]
 	tagline = "Making it up as I go along"
 	description = "Making it up as I go along"
-	github = "stantont"
+	github = "https://github.com/stantont"
 	gravatarHash = "6726109ee855ffcdd9bff44adc0fc755"
 	twitter = "https://twitter.com/stantont"
-
+	mainPageTypes = "post link"
