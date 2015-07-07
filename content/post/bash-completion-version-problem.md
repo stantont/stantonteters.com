@@ -8,21 +8,23 @@ categories = [
 ]
 tags = ["bash", "command line", "hugo"]
 +++
-While experimenting with Hugo, the command line static site generator written in Go, I got an error when using Bash completion. I didn't save the error, but a search of my Google search history makes it look like it was something like this: 
+While experimenting with Hugo, the command line static site generator written in Go, I got an error when using Bash completion. I didn't save the error, but a search of my Google search history makes it look like it was something like this:
 
 {{< highlight bash >}}
 hugo [tab] _init_completion: command not found
 {{< /highlight >}}
 
-I couldn't figure it out at first. Eventually I tried another application, git, and tab completion worked fine. Some searching led me to an issue on another application that mentioned the user had an old version of bash-completion.[^1] That didn't make an immediate impression on me. 
+I couldn't figure it out at first. Eventually I tried another application, git, and tab completion worked fine. Some searching led me to an issue on another application that mentioned the user had an old version of bash-completion.[^1] That didn't make an immediate impression on me.
 
 [^1]: https://github.com/ros/catkin/issues/485
 
-I thought perhaps there was a problem with how the completion file was generated. 
+I thought perhaps there was a problem with how the completion file was generated.
+
+<!--more-->
 
 I found that Hugo has a command to generate the completion file, so I tried using it. I did regenerate it, but that didn't help.
 
-I went to the Hugo bash completion file and commented out the line `_init_completion -s || return`. That caused the error to stop, but bash completion also stopped working. 
+I went to the Hugo bash completion file and commented out the line `_init_completion -s || return`. That caused the error to stop, but bash completion also stopped working.
 
 I uninstalled and reinstalled bash-completion. I even tried uninstalling and reinstalling some of the applications that had bash completions.
 
