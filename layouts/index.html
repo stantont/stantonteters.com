@@ -1,19 +1,27 @@
 {{ partial "head.html" . }}
 <div class="content container">
   <div class="posts">
-    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "in" .Site.Params.mainPageTypes) }}
     {{ range $paginator.Pages }}
     <div class="post">
-      <h1 class="post-title">
+      <h1 class="post-title{{ if eq .Type "link"}} link-type{{ end }}">
+        {{ if eq .Type "post" }}
         <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ else }}
+        <a href="{{ .Params.link }}">{{ .Title }}</a>  <i class="fa fa-external-link"></i></h1>
+        {{ end }}
       </h1>
-      <span class="post-date">{{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read{{ if .Site.DisqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+      <span class="post-date">{{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read{{ if .Site.DisqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }} &middot; {{ partial "permalink.html" . }}
       {{ if isset .Params "categories" }}
       <br/>
       {{ range .Params.categories }}<a class="label" href="/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
       {{ end }}</span>
-      <p>{{ .Description }}</p>
-      <a href="{{ .Permalink }}">Read On &rarr;</a>
+      <!-- <p>{{ .Description }}</p> -->
+      {{ .Summary }}
+      {{ if .Truncated }}
+      <div class="read-more-link"><a href="{{ .RelPermalink }}">Read More…</a></div>
+      {{ end }}
+      <!-- <a href="{{ .Permalink }}">Read On &rarr;</a> -->
     </div>
     {{ end }}
     {{ template "_internal/pagination.html" . }}
