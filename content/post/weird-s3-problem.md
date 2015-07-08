@@ -3,7 +3,7 @@ categories = ["Devlopment", "Technology"]
 date = "2015-07-07T22:03:40-04:00"
 description = ""
 tags = ["aws", "s3", "hosting", "css"]
-title = "Quickie: Weird W3 Problem"
+title = "Quickie: Weird S3 Problem"
 +++
 Last night I pushed the changes with a new stylesheet.
 Tonight while looking at the site I noticed one of the styles that was in the stylesheet was not getting applied.
