@@ -14,9 +14,7 @@ While experimenting with Hugo, the command line static site generator written in
 hugo [tab] _init_completion: command not found
 {{< /highlight >}}
 
-I couldn't figure it out at first. Eventually I tried another application, git, and tab completion worked fine. Some searching led me to an issue on another application that mentioned the user had an old version of bash-completion.[^1] That didn't make an immediate impression on me.
-
-[^1]: https://github.com/ros/catkin/issues/485
+I couldn't figure it out at first. Eventually I tried another application, git, and tab completion worked fine. Some searching led me to an issue on another application that mentioned the user had an old version of [bash-completion](https://github.com/ros/catkin/issues/485). That didn't make an immediate impression on me.
 
 I thought perhaps there was a problem with how the completion file was generated.
 
@@ -28,13 +26,12 @@ I went to the Hugo bash completion file and commented out the line `_init_comple
 
 I uninstalled and reinstalled bash-completion. I even tried uninstalling and reinstalling some of the applications that had bash completions.
 
-I looked at the code in the Homebrew formula for bash-completion [^2] and saw the following comment:
+I looked at the code in the Homebrew formula for [bash-completion](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb) and saw the following comment:
+
 {{< highlight bash >}}
 # NOTE: version 2.0 is out, but it requires Bash 4, and OS X ships
 # with 3.2.48. See homebrew-versions for a 2.0 formula.
 {{< /highlight >}}
-
-[^2]: https://github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb
 
 At this point I recalled that article that mentioned the user had an old version of bash-completion and wished I'd paid better attention to it. So now it was just a matter of figuring out how to install (*tap* in Homebrew parlance) an alternate repo.  I had Bash 4 installed via Homebrew, so the inconsistency with the Mac's version of Bash didn't concern me.
 
