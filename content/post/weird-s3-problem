@@ -21,4 +21,5 @@ I'm not sure if S3 set this or somehow the `s3cmd` app set it somehow.
 
 I changed it manually in S3 and reloaded the site, but unfortunately the changes were applied yet.
 My site is hosted on CloudFlare, so in order to get the change applied immediately I had to turn on "Development Mode" in order to turn off their caching.
-Then I reloaded the site, and *voilà*, there were my stylesheet changes. 
+Then I reloaded the site, and *voilà*, there were my stylesheet changes.
+<!--more-->
