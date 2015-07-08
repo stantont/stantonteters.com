@@ -33,7 +33,9 @@ I can't remember the exact issue, but I had some issues with the combination of 
 
 The home page template filter uses the Hugo `Where` template function to limit the home page to just blog posts. It looks like this:
 
-    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{< highlight go >}}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{< /highlight >}}
 
 That didn't appear as though it would work for multiple content types, so I eventually wound up looking at the `Where` function in the Hugo [template_funcs.go file](https://github.com/spf13/hugo/blob/v0.14/tpl/template_funcs.go).
 I found that the `Where` function can take another argument between the field, `Type` in this case, and the string to match, "post" in the example above.
@@ -46,7 +48,9 @@ Surprisingly, that did not work either.
 I played with that for a while, trying to get the `Where` function to use the array/slice, but nothing worked.
 Just for the hell of it, I tried using a string with the two words separated by a space.
 
-    {{ $paginator := .Paginate (where .Data.Pages "Type" "in" "post link") }}
+{{< highlight go >}}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "in" "post link") }}
+{{< /highlight >}}
 
 That works!
 So I changed my config setting using a slice to be a string.
